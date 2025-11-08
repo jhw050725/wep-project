@@ -3,20 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <title>household_ledge project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div id="Wep-Page Title">
+  <div id="Wep-Page Title" class="title">
     <h1>Tracing Today: Thoughts and Finances</h1>
   </div>
-  <div id=""Date-Selection>
-    <input type="date">
+
+  <div id=""Date-Selection class="date-box">
+    <label for="date">📅 날짜 선택</label>
+    <input type="date" value="2025-11-08" id="date"  min="1900-01-01" max="2025-12-31">
   </div>
+
   <div id="Select Type">
     <select>
       <option value="" selected hidden>Select Income/Expense</option>
       <option value="income">Income</option>
       <option value="expense">Expense</option>
     </select>
+  </div>
+
+  <div>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>From/To</th>
+        <th>Memo</th>
+      </tr>
+      <tr>
+        <td>
+          <select>
+            <option value="" selected hidden>Select Category</option>
+            <option value="급여">급여</option>
+            <option value="용돈">용돈</option>
+            <option value="금융수입">금융수입</option>
+            <option value="장학금">장학금</option>
+            <option value="중고거래">중고거래</option>
+            <option value="기타수입">기타수입</option>
+          </select>
+        </td>
+        <td>
+          <input type="number" name="amount" placeholder="No amount">
+        </td>
+        <td>
+          <input name="from/to" placeholder="Received from">
+        </td>
+        <td>
+          <input name="mamo" placeholder="Write about today’s income…">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Amount</th>
+        <th>From/To</th>
+        <th>Memo</th>
+      </tr>
+      <tr>
+        <td>
+          <select>
+            <option value="" selected hidden>Select Category</option>
+            <option value="식비">식비</option>
+            <option value="카페/간식">카페/간식</option>
+            <option value="술/유흥">술/유흥</option>
+            <option value="생활">생활</option>
+            <option value="온라인쇼핑">온라인쇼핑</option>
+            <option value="패션/쇼핑">패션/쇼핑</option>
+            <option value="뷰티/미용">뷰티/미용</option>
+            <option value="교통">교통</option>
+            <option value="자동차">자동차</option>
+            <option value="주거/통신">주거/통신</option>
+            <option value="의료/건강">의료/건강</option>
+            <option value="금융">금융</option>
+            <option value="문화/여가">문화/여가</option>
+            <option value="여행/숙박">여행/숙박</option>
+            <option value="교육/학습">교육/학습</option>
+            <option value="경조/선물">경조/선물</option>
+          </select>
+        </td>
+        <td>
+          <input type="number" name="amount" placeholder="No amount">
+        </td>
+        <td>
+          <input name="from/to" placeholder="Paid to">
+        </td>
+        <td>
+          <input name="mamo" placeholder="Write about today’s expense">
+        </td>
+      </tr>
+    </table>
   </div>
 </body>
 </html>
